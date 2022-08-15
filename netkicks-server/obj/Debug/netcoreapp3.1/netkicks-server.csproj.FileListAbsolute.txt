@@ -1,0 +1,14 @@
+C:\netkicks-server\netkicks-server\bin\Debug\netcoreapp3.1\netkicks-server.exe
+C:\netkicks-server\netkicks-server\bin\Debug\netcoreapp3.1\netkicks-server.deps.json
+C:\netkicks-server\netkicks-server\bin\Debug\netcoreapp3.1\netkicks-server.runtimeconfig.json
+C:\netkicks-server\netkicks-server\bin\Debug\netcoreapp3.1\netkicks-server.runtimeconfig.dev.json
+C:\netkicks-server\netkicks-server\bin\Debug\netcoreapp3.1\netkicks-server.dll
+C:\netkicks-server\netkicks-server\bin\Debug\netcoreapp3.1\netkicks-server.pdb
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.csproj.AssemblyReference.cache
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.GeneratedMSBuildEditorConfig.editorconfig
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.AssemblyInfoInputs.cache
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.AssemblyInfo.cs
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.csproj.CoreCompileInputs.cache
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.dll
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.pdb
+C:\netkicks-server\netkicks-server\obj\Debug\netcoreapp3.1\netkicks-server.genruntimeconfig.cache
