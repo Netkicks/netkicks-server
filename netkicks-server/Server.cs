@@ -74,6 +74,7 @@ namespace netkicks_server
 
         bool isBanned(Player incomingPlayer, string ipAddress)
         {
+            //@todo implementar logica pra saber se jogador esta banido ou nao
             return false;
         }
     }

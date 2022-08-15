@@ -12,6 +12,7 @@
 
     public bool isFull()
     {
+        //@todo implementar logica para saber se a partida esta cheia
         return false;
     }
 }
