@@ -4,23 +4,33 @@ using System.Text;
 using LiteNetLib;
 using Newtonsoft.Json;
 using LiteNetLib.Utils;
+using System.Text.Json.Serialization;
 
 namespace netkicks_server
 {
     class Server
     {
         public static NetManager server;
+     
+        
         public Match[] matches = new Match[9999];
 
         public Server()
         {
-            // debugging
             matches[0] = new Match();
             EventBasedNetListener listener = new EventBasedNetListener();
             listener.ConnectionRequestEvent += this.onConnectionRequest;
+            listener.PeerDisconnectedEvent += onDisconnected;
             listener.NetworkReceiveEvent += onGotMessage;
             server = new NetManager(listener);
             server.Start(9090);
+        }
+
+        private void onDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
+        {
+            Program.Log("onDisconnected");
+            if (matches[peer.matchIndex] != null)
+                matches[peer.matchIndex].RemovePlayerFromMatch(peer.inGameIndex);
         }
 
         private void onGotMessage(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
@@ -45,7 +55,7 @@ namespace netkicks_server
                     return;
                 }
 
-                desiredMatch.AddPlayerToMatch(incomingPlayer);
+                desiredMatch.AddPlayerToMatch(incomingPlayer, peer);
                 NetDataWriter writer = Utils.GetNetDataWriter(NetworkMessageType.REQUEST_MATCH_DATA);
                 writer.Put(JsonConvert.SerializeObject(desiredMatch));
                 peer.Send(writer, DeliveryMethod.ReliableOrdered);

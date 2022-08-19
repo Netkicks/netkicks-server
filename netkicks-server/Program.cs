@@ -15,5 +15,10 @@ namespace netkicks_server
             }
 
         }
+
+        public static void Log(string message)
+        {
+            Console.WriteLine(message);
+        }
     }
 }

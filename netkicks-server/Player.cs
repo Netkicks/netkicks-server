@@ -4,4 +4,5 @@
     public string enteredPassword;
     public string id;
     public string name;
+    public int inGameIndex;
 }
